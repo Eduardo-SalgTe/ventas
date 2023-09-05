@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tabla de usuarios</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        #header {
+          background-color: #f1f1f1;
+          padding: 20px;
+        }
+    
+        .mi-boton {
+          background-color: #3d9ab1; /* Color de fondo */
+          border: none; /* Sin borde */
+          color: white; /* Color de texto */
+          padding: 10px 20px; /* Espacio interno (arriba/abajo izquierda/derecha) */
+          text-align: center; /* Alineacion del texto */
+          text-decoration: none; /* Sin decoracion de texto */
+          display: inline-block; /* Mostrar como bloque en línea */
+          font-size: 16px; /* Tamaño de fuente */
+          margin: 4px 2px; /* Espacio externo (arriba/abajo izquierda/derecha) */
+          cursor: pointer; /* Cambia el cursor al pasar sobre el boton */
+        }
+    
+        .mi-boton:hover {
+          background-color: #45a049;
+        }
+        .botonL {
+          background-color: #b19c3d;
+          border: none; 
+          color: white; 
+          padding: 10px 20px;
+          text-align: center; 
+          text-decoration: none; 
+          display: inline-block; 
+          font-size: 16px; 
+          margin: 4px 2px; 
+          cursor: pointer;
+        }
+    
+        .botonL:hover {
+          background-color: #c25f3b;
+        }
+        .botonR {
+        background-color: #c95226;
+        border: none; 
+        color: white; 
+        padding: 10px 20px;
+        text-align: center; 
+        text-decoration: none; 
+        display: inline-block; 
+        font-size: 16px; 
+        margin: 4px 2px; 
+        cursor: pointer;
+      }
+  
+      .botonR:hover {
+        background-color: #e0460e;
+      }
+        #loginForm {
+          margin-top: 20px;
+        }
+
+        #loginForm input[type="text"] {
+          padding: 10px;
+          font-size: 16px;
+        }
+
+        #loginForm input[type="submit"] {
+          padding: 10px 20px;
+          font-size: 16px;
+          background-color: #3fb88f;
+          color: white;
+          border: none;
+          cursor: pointer;
+        }
+        #loginForm input[type="submit"]:hover{
+            background-color: #339e76; 
+        }
+        h1 {
+          color: blue;
+          font-size: 24px;
+          text-align: left;
+        }
+        #myTable {
+          display: none; 
+        }
+      </style>
+</head>
+<body>
+    <div id="header">
+      <a class="botonL" id="btnb"  tabindex="3" href="http://127.0.0.1:9000/principal.html">IR A USUARIOS</a>
+      <a class="mi-boton"  id="btnb2" tabindex="4" href="http://127.0.0.1:9000/consultar_v.html">Consultar</a>
+      <a class="mi-boton" tabindex="5" href="http://127.0.0.1:9000/insert_sales.html">Insertar</a>
+      <a class="mi-boton" tabindex="6" href="http://127.0.0.1:9000/update_sales.html">Modificar</a>
+      <a class="mi-boton" tabindex="7" href="http://127.0.0.1:9000/delete_sales.html">Eliminar</a>
+      <a class="botonR" id="lblhb"  tabindex="8" href="http://127.0.0.1:9000/login.html">CERRAR SESION</a>
+    </div>
+      <h1>CONSULTAR VENTAS</h1>
+            
+      <br> 
+    <div id="pagination">
+        <button id="prev-button" disabled>Prev</button>
+        <span id="current-page">1</span>
+        <button id="next-button">Next</button>
+    </div>
+     
+    <br> 
+    <table id="users-table">
+        <thead>
+            <tr>
+              <th>saleDate</th>
+              <th>items</th>
+              <th>stroreLocation</th>
+              <th>customer</th>
+              <th>couponUsed</th>
+              <th>purchaseMethod</th>
+              <th>id</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+    <table id="myTable">
+      <thead>
+          <tr>
+            <th>saleDate</th>
+            <th>items</th>
+            <th>stroreLocation</th>
+            <th>customer</th>
+            <th>couponUsed</th>
+            <th>purchaseMethod</th>
+            <th>id</th>
+            </tr>
+      </thead>
+      <tbody>
+          
+      </tbody>
+  </table>
+    <script src="scripts/ventas.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Insertar registro</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+      #header {
+        background-color: #f1f1f1;
+        padding: 20px;
+      }
+  
+      .mi-boton {
+        background-color: #3d9ab1;
+        border: none; 
+        color: white; 
+        padding: 10px 20px; 
+        text-align: center; 
+        text-decoration: none; 
+        display: inline-block; 
+        font-size: 16px; 
+        margin: 4px 2px; 
+        cursor: pointer;
+      }
+  
+      .mi-boton:hover {
+        background-color: #45a049;
+      }
+      .botonL {
+        background-color: #b19c3d;
+        border: none; 
+        color: white; 
+        padding: 10px 20px;
+        text-align: center; 
+        text-decoration: none; 
+        display: inline-block; 
+        font-size: 16px; 
+        margin: 4px 2px; 
+        cursor: pointer;
+      }
+  
+      .botonL:hover {
+        background-color: #c25f3b;
+      }
+      .botonR {
+        background-color: #c95226;
+        border: none; 
+        color: white; 
+        padding: 10px 20px;
+        text-align: center; 
+        text-decoration: none; 
+        display: inline-block; 
+        font-size: 16px; 
+        margin: 4px 2px; 
+        cursor: pointer;
+      }
+  
+      .botonR:hover {
+        background-color: #e0460e;
+      }
+      #loginForm {
+        margin-top: 20px;
+      }
+
+      #loginForm input[type="text"] {
+        padding: 10px;
+        font-size: 16px;
+      }
+
+      #loginForm input[type="submit"] {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #3fb88f;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      #loginForm input[type="submit"]:hover{
+          background-color: #339e76; 
+      }
+      h1 {
+        color: blue;
+        font-size: 24px;
+        text-align: left;
+      }
+      #myTable {
+        display: none; 
+      }
+    </style>
+</head>
+<body>
+  <div id="header">
+    <a class="botonL" id="btnb"  tabindex="3" href="http://127.0.0.1:9000/ventas.html">IR A VENTAS</a>
+    <a class="mi-boton"  id="btnb2" tabindex="4" href="http://127.0.0.1:9000/principal.html">Consultar</a>
+    <a class="mi-boton" tabindex="5" href="http://127.0.0.1:9000/insertar.html">Insertar</a>
+    <a class="mi-boton" tabindex="6" href="http://127.0.0.1:9000/actualizar.html">Modificar</a>
+    <a class="mi-boton" tabindex="7" href="http://127.0.0.1:9000/eliminar.html">Eliminar</a>
+    <a class="botonR" id="lblhb"  tabindex="8" href="http://127.0.0.1:9000/login.html">CERRAR SESION</a>
+  </div>
+      <h1>CREAR USUARIO</h1>
+      <form id="loginForm">
+        <label name="id">nombre:</label>
+        <input type="text" id="username" name="username" placeholder="Ingresa usuario" required>
+        
+        <label name="id">nivel:</label>
+        <input type="text" id="op" name="age" placeholder="Ingresa nivel" required>
+        
+        <label name="id">email:</label>
+        <input type="text" id="correo" name="correo" placeholder="Ingresa correo" required>
+
+        <label name="id">password:</label>
+        <input type="text" id="passw" name="correo" placeholder="Ingresa contrasena" required>
+
+        <input type="submit" value="Ingresar">
+        
+  </form>
+      <br> 
+   
+    <br> 
+    <table id="insert-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Email</th>
+                <th>Pasword</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+    <script src="scripts/insert.js"></script>
+    
+</body>
+</html>

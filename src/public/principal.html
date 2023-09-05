@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tabla de usuarios</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        #header {
+          background-color: #f1f1f1;
+          padding: 20px;
+        }
+    
+        .mi-boton {
+          background-color: #3d9ab1; /* Color de fondo */
+          border: none; /* Sin borde */
+          color: white; /* Color de texto */
+          padding: 10px 20px; /* Espacio interno (arriba/abajo izquierda/derecha) */
+          text-align: center; /* Alineacion del texto */
+          text-decoration: none; /* Sin decoracion de texto */
+          display: inline-block; /* Mostrar como bloque en línea */
+          font-size: 16px; /* Tamaño de fuente */
+          margin: 4px 2px; /* Espacio externo (arriba/abajo izquierda/derecha) */
+          cursor: pointer; /* Cambia el cursor al pasar sobre el boton */
+        }
+    
+        .mi-boton:hover {
+          background-color: #45a049;
+        }
+        .botonL {
+          background-color: #b19c3d;
+          border: none; 
+          color: white; 
+          padding: 10px 20px;
+          text-align: center; 
+          text-decoration: none; 
+          display: inline-block; 
+          font-size: 16px; 
+          margin: 4px 2px; 
+          cursor: pointer;
+        }
+    
+        .botonL:hover {
+          background-color: #c25f3b;
+        }
+        .botonR {
+        background-color: #c95226;
+        border: none; 
+        color: white; 
+        padding: 10px 20px;
+        text-align: center; 
+        text-decoration: none; 
+        display: inline-block; 
+        font-size: 16px; 
+        margin: 4px 2px; 
+        cursor: pointer;
+      }
+  
+      .botonR:hover {
+        background-color: #e0460e;
+      }
+        #loginForm {
+          margin-top: 20px;
+        }
+
+        #loginForm input[type="text"] {
+          padding: 10px;
+          font-size: 16px;
+        }
+
+        #loginForm input[type="submit"] {
+          padding: 10px 20px;
+          font-size: 16px;
+          background-color: #3fb88f;
+          color: white;
+          border: none;
+          cursor: pointer;
+        }
+        #loginForm input[type="submit"]:hover{
+            background-color: #339e76; 
+        }
+        h1 {
+          color: blue;
+          font-size: 24px;
+          text-align: left;
+        }
+        #myTable {
+          display: none; 
+        }
+      </style>
+</head>
+<body>
+    <div id="header">
+          <a class="botonL" id="btnb"  tabindex="3" href="http://127.0.0.1:9000/ventas.html">IR A VENTAS</a>
+          <a class="mi-boton"  id="btnb2" tabindex="4" href="http://127.0.0.1:9000/principal.html">Consultar</a>
+          <a class="mi-boton" tabindex="5" href="http://127.0.0.1:9000/insertar.html">Insertar</a>
+          <a class="mi-boton" tabindex="6" href="http://127.0.0.1:9000/actualizar.html">Modificar</a>
+          <a class="mi-boton" tabindex="7" href="http://127.0.0.1:9000/eliminar.html">Eliminar</a>
+          <a class="botonR" id="lblhb"  tabindex="8" href="http://127.0.0.1:9000/login.html">CERRAR SESION</a>
+    </div>
+      <h1>CONSULTAR USUARIO</h1>
+      <form id="loginForm">
+        <label for="username">Usuario:</label>
+        <input type="text" id="username" name="username" placeholder="Ingresar nombre" required>
+        <input type="submit" id="search" value="Buscar">
+      </form>
+      
+      <br> 
+      <script type="module">
+        import { apiUrl } from './url.js';
+
+        // Asignar URL al elemento 'span'
+        document.addEventListener('DOMContentLoaded', () => {
+            const spanElement = document.getElementById('current-url');
+            spanElement.textContent = apiUrl;
+        });
+    </script>
+    <div id="pagination">
+        <button id="prev-button" disabled>Prev</button>
+        <span id="current-page">1</span>
+        <button id="next-button">Next</button>
+        <span id="current-url">apiUrl</span>
+    </div>
+     
+    <br> 
+    <table id="users-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>op</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Id</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+    <table id="myTable">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>op</th>
+              <th>Email</th>
+              <th>Password</th>
+              <th>Id</th>
+            </tr>
+      </thead>
+      <tbody>
+          
+      </tbody>
+  </table>
+    <script src="scripts/consult.js"></script>
+    
+</body>
+</html>

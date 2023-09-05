@@ -1,0 +1,128 @@
+###
+POST http://127.0.0.1:9000/api/usuarios HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "gerard",
+    "op": 14,
+    "email": "delpoder@mx.com",
+    "passw": "gadg"
+}
+
+###
+GET http://127.0.0.1:9000/api/usuarios HTTP/1.1
+
+###
+GET http://127.0.0.1:9000/api/usuarios/n/rutis HTTP/1.1
+
+###
+GET http://127.0.0.1:9000/api/usuarios/mail/hola HTTP/1.1
+
+###
+GET http://127.0.0.1:9000/api/usuarios/id/64a6e388757f96bfa8be180b HTTP/1.1
+
+
+###
+PUT http://127.0.0.1:9000/api/usuarios/64a5140a2b30896b98daa4be HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "rutis",
+    "age": 81,
+    "email": "rutis@"
+}
+
+###
+DELETE http://127.0.0.1:9000/api/usuarios/64a6e3c1757f96bfa8be180f HTTP/1.1
+
+###
+POST http://127.0.0.1:9000/api/ventas HTTP/1.1
+Content-Type: application/json
+
+{
+    "user_id": "maria84",
+    "saleDate": "2023-10-30",
+  "items": ["lapiz","gorra","chanclas"],
+  "storeLocation": "tianguistenco",
+  "customer": {
+    "name": "mariano",
+    "email": "mari@gaf"
+  },
+  "couponUsed": true,
+  "purchaseMethod": "cash"
+}
+
+###
+GET http://127.0.0.1:9000/api/ventas/vv HTTP/1.1
+
+###
+GET http://127.0.0.1:9000/api/ventas/salgado666 HTTP/1.1
+
+###
+PUT http://127.0.0.1:9000/api/ventas/64a4f215a36f39f568a17972 HTTP/1.1
+Content-Type: application/json
+
+{
+    "couponUsed": false,
+    "purchaseMethod": "trans"
+}
+
+###
+DELETE http://127.0.0.1:9000/api/ventas/64a4f215a36f39f568a17972 HTTP/1.1
+
+###
+GET http://127.0.0.1:9000/api/sales/twty/a HTTP/1.1
+
+###
+GET http://127.0.0.1:9000/api/sales/Tenango HTTP/1.1
+
+###
+GET http://127.0.0.1:9000/api/sales/cou/false HTTP/1.1
+
+###
+GET http://127.0.0.1:9000/api/sales/pm/In store HTTP/1.1
+
+###
+GET http://127.0.0.1:9000/api/sales/id/5bd761dcae323e45a93ccfe8 HTTP/1.1
+
+###
+POST http://127.0.0.1:9000/api/sales HTTP/1.1
+Content-Type: application/json
+
+{
+    "customer": {
+        "gender": "M",
+        "age": 23,
+        "email": "lalo@gmail.com",
+        "satisfaction": 5
+      },
+      "saleDate": "2015-03-23T21:06:49.506Z",
+      "items": [
+        {
+          "_id": "64ad318a406d88f46ed9b940",
+          "name": "printer paper",
+          "tags": [
+            "office",
+            "stationary"
+          ],
+          "price": 8,
+          "quantity": 23
+        },
+        {
+          "_id": "64ad318a406d88f46ed9b941",
+          "name": "notepad",
+          "tags": [
+            "office",
+            "writing",
+            "school"
+          ],
+          "price": 7,
+          "quantity": 2000
+        }],
+    "storeLocation": "Tenango",
+    "couponUsed": true,
+    "purchaseMethod": "Online"
+}
+
+###
+DELETE http://127.0.0.1:9000/api/sales/5bd761dcae323e45a93ccfe8 HTTP/1.1
